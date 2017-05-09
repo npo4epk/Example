@@ -1,0 +1,74 @@
+<div class="main">
+
+    <div class="information">
+        <h3 class="information__title">Decision Tables</h3>
+        <p class="information__text">This is a list of all tables available in current project. If you have no tables, start by creating a first one.</p>
+        <p class="information__text">Here you can find history of all decisions in this project. Have a nice work!</p>
+    </div>
+
+    <div class="tables-wrapper">
+
+        <div class="command">
+            <a href="" class="command__create">
+                <span class="command__plus"></span>
+                Create table
+            </a>
+        </div>
+
+        <div>
+        <table class="tables-list">
+            <thead>
+                <tr>
+                    <th class="tables-list__column">Name</th>
+                    <th class="tables-list__column">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                 <tr ng-repeat="item in $ctrl.project">
+                     <!--<td class="tables-list__row tables-list__row&#45;&#45;size">{{item.$id}}</td>-->
+                     <!--<td class="tables-list__row">{{item}}</td>-->
+                     <td>{{item.name}}</td>
+                 </tr>
+                <!--<tr>-->
+                    <!--<td colspan="2" class="tables-list__row tables-list__row&#45;&#45;center">You don't have any tables. <a href="">Create your first table!</a></td>-->
+                <!--</tr>-->
+                <!--<tr>-->
+                    <!--<td class="tables-list__row tables-list__row&#45;&#45;size">Name</td>-->
+                    <!--<td class="tables-list__row">Desc</td>-->
+                <!--</tr>-->
+                <!--<tr>-->
+                    <!--<td class="tables-list__row tables-list__row&#45;&#45;size">Name</td>-->
+                    <!--<td class="tables-list__row">Desc</td>-->
+                <!--</tr>-->
+                <!--<tr>-->
+                    <!--<td class="tables-list__row tables-list__row&#45;&#45;size">Name</td>-->
+                    <!--<td class="tables-list__row">Desc</td>-->
+                <!--</tr>-->
+                <!--<tr>-->
+                    <!--<td class="tables-list__row tables-list__row&#45;&#45;size">Name</td>-->
+                    <!--<td class="tables-list__row">Desc</td>-->
+                <!--</tr>-->
+                <!--<tr>-->
+                    <!--<td class="tables-list__row tables-list__row&#45;&#45;size">Name</td>-->
+                    <!--<td class="tables-list__row">Desc</td>-->
+                <!--</tr>-->
+                <!--<tr>-->
+                    <!--<td class="tables-list__row tables-list__row&#45;&#45;size">Name</td>-->
+                    <!--<td class="tables-list__row">Desc</td>-->
+                <!--</tr>-->
+                <!--<tr>-->
+                    <!--<td class="tables-list__row tables-list__row&#45;&#45;size">Name</td>-->
+                    <!--<td class="tables-list__row">Desc</td>-->
+                <!--</tr>-->
+                <!--<tr>-->
+                    <!--<td class="tables-list__row tables-list__row&#45;&#45;size">Name</td>-->
+                    <!--<td class="tables-list__row">Desc</td>-->
+                <!--</tr>-->
+            </tbody>
+        </table>
+        </div>
+
+
+    </div>
+
+</div>

@@ -1,0 +1,260 @@
+
+/* @IMPORT
+ ========================= */
+@import "../components/_variables";
+@import "../helpers/_mixins";
+
+
+.sign-up {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  background: $bgc-e81a50;
+  background: linear-gradient(to top, $bgc-e81a50 0%, $bgc-3d3d3d 100%);
+  overflow: hidden;
+}
+
+
+.sign-up-wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+}
+
+
+.sign-up-logo {
+  display: block;
+  margin-bottom: 40px;
+
+  &__link {
+    text-decoration: none !important;
+  }
+
+  &__img {
+    height: 80px;
+    width: auto;
+  }
+}
+
+
+.sign-up-block {
+  width: 100%;
+  max-width: 300px;
+  padding: 0 5px;
+}
+
+
+.sign-up-title {
+  text-align: center;
+  margin-bottom: 30px;
+
+  &__text {
+    font-family: $Montserrat-Bold;
+    @include rem(fs, 16, $font-size-mixin);
+    @include rem(lh, 18, $font-size-mixin);
+    color: $color-ffffff;
+    margin: 0;
+  }
+}
+
+
+.sign-up-form {
+  @include placeholder($color-ffffff, 300, none);
+}
+
+.sign-in-form__username,
+.sign-up-form__mail,
+.sign-up-form__password {
+  font-family: $Montserrat-Regular;
+  @include rem(lh, 14, $font-size-mixin);
+  @include rem(fs, 16, $font-size-mixin);
+  display: block;
+  width: 90%;
+  padding: 10px;
+  margin: 0 auto 10px auto;
+  color: $color-ffffff;
+  background-color: transparent;
+  border: 3px solid $border-ffffff;
+  border-radius: 3px;
+  transition: 0.25s;
+  text-align: center;
+  outline: none;
+
+  &:focus {
+    width: 100%;
+    color: $color-ffffff;
+  }
+
+  :-webkit-autofill {
+    color: $color-ffffff !important;
+    text-fill-color: $color-ffffff !important;
+  }
+}
+
+
+.sign-up-form__button {
+  font-family: $Montserrat-Regular;
+  @include rem(fs, 14, $font-size-mixin);
+  @include rem(lh, 16, $font-size-mixin);
+  display: block;
+  width: 90%;
+  padding: 10px;
+  margin: 0 auto 10px auto;
+  border: 3px solid transparent;
+  border-radius: 3px;
+  color: $color-ffffff;
+  background-color: $bgc-3d3d3d;
+  transition: 0.25s;
+  text-align: center;
+  outline: none;
+  text-transform: uppercase;
+}
+
+
+.sign-up-form__link {
+  font-family: $Montserrat-Regular;
+  @include rem(lh, 16, $font-size-mixin);
+  @include rem(fs, 18, $font-size-mixin);
+  color: $color-ffffff !important;
+}
+
+
+.sign-up__text {
+  font-family: $Montserrat-Bold;
+  @include rem(fs, 14, $font-size-mixin);
+  @include rem(lh, 16, $font-size-mixin);
+  color: $color-3d3d3d;
+  margin: 0;
+  text-align: center;
+}
+
+
+.sign-up__link {
+  font-family: $Montserrat-Bold;
+  @include rem(fs, 14, $font-size-mixin);
+  @include rem(lh, 16, $font-size-mixin);
+  color: $color-ffffff;
+  margin-left: 10px;
+}
+
+
+.sign-up-bubbles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  @include list-clear();
+
+  &__item {
+    position: absolute;
+    bottom: -200px;
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(229, 233, 230, 0.28);
+    animation: square 15s infinite;
+    transition-timing-function: linear;
+
+    &:nth-child(1) {
+      left: 5%;
+    }
+
+    &:nth-child(2) {
+      left: 10%;
+      width: 80px;
+      height: 80px;
+      animation-delay: 2s;
+      animation-duration: 17s;
+    }
+
+    &:nth-child(3) {
+      left: 25%;
+      animation-delay: 4s;
+    }
+
+    &:nth-child(4) {
+      left: 40%;
+      width: 60px;
+      height: 60px;
+      animation-duration: 22s;
+      background-color: rgba(229, 233, 230, 0.28);
+    }
+
+    &:nth-child(5) {
+      left: 70%;
+    }
+
+    &:nth-child(6) {
+      left: 80%;
+      width: 120px;
+      height: 120px;
+      animation-delay: 3s;
+      background-color: rgba(229, 233, 230, 0.28);
+    }
+
+    &:nth-child(7) {
+      left: 32%;
+      width: 160px;
+      height: 160px;
+      animation-delay: 7s;
+    }
+
+    &:nth-child(8) {
+      left: 55%;
+      width: 20px;
+      height: 20px;
+      animation-delay: 15s;
+      animation-duration: 40s;
+    }
+
+    &:nth-child(9) {
+      left: 25%;
+      width: 10px;
+      height: 10px;
+      animation-delay: 2s;
+      animation-duration: 40s;
+      background-color: rgba(229, 233, 230, 0.28);
+    }
+
+    &:nth-child(10) {
+      left: 90%;
+      width: 160px;
+      height: 160px;
+      animation-delay: 11s;
+    }
+  }
+}
+
+
+@keyframes square {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-1500px) rotate(600deg);
+  }
+}
+
+
+.ng-valid {
+  color: $color-ffffff !important;
+  border-color: $border-ffffff !important;
+}
+
+
+.ng-invalid.ng-touched {
+  color: $color-e81a50;
+  border-color: $border-e81a50;
+}
+
+
+.ng-invalid .sign-up-form__button {
+  opacity: 0.7;
+  cursor: not-allowed;
+}

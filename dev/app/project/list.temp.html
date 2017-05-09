@@ -1,0 +1,29 @@
+<ul>
+    <li>{{$ctrl.namePr}}</li>
+    <ul>
+        <li ng-repeat="item in $ctrl.list">
+            <a href="" ui-sref="project.list({page:item.$id})">{{item.$id}}</a>
+        </li>
+    </ul>
+</ul>
+
+
+<table>
+    <thead>
+        <tr>
+            <td>link</td>
+            <td>name</td>
+        </tr>
+    </thead>
+    <tbody>
+    <tr  ng-repeat="table in $ctrl.tables">
+        <th>
+            <a href="" ui-sref="project.tables({page: $ctrl.namePr, tabId:table.$id})">Link</a>
+            {{table.$id}}
+        </th>
+        <th>
+            {{table.$value}}
+        </th>
+    </tr>
+    </tbody>
+</table>

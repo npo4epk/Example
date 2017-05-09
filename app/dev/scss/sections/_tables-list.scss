@@ -1,0 +1,151 @@
+/* @IMPORT
+ ========================= */
+@import "../components/_variables";
+@import "../helpers/_mixins";
+
+
+.information {
+  background-color: $bgc-fafafa;
+  padding: 20px 50px;
+  margin-bottom: 20px;
+
+  &__title {
+    font-family: $Montserrat-Semibold;
+    @include rem(fs, 20, $font-size-mixin);
+    @include rem(lh, 22, $font-size-mixin);
+    margin: 0 0 20px 0;
+  }
+
+  &__text {
+    font-family: $Montserrat-Regular;
+    @include rem(fs, 15, $font-size-mixin);
+    @include rem(lh, 16, $font-size-mixin);
+    font-weight: 600;
+    margin: 0 0 12px 0;
+  }
+}
+
+
+.tables-wrapper {
+  padding: 20px 50px;
+}
+
+
+.command {
+  margin-bottom: 15px;
+  
+  &__create {
+    font-family: $Montserrat-Regular;
+    @include rem(fs, 12, $font-size-mixin);
+    @include rem(lh, 14, $font-size-mixin);
+    font-weight: 500;
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px 10px 50px;
+    color: $color-3d3d3d;
+    background-color: transparent;
+    border: 2px solid $border-e81a50;
+    text-transform: uppercase;
+    text-decoration: none !important;
+    transition: 0.5s all;
+
+    &:hover {
+      color: $color-ffffff;
+      background-color: $bgc-e81a50;
+    }
+  }
+
+  &__plus {
+    @include rem(fs, 20, $font-size-mixin);
+    @include rem(lh, 20, $font-size-mixin);
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 17px;
+    background-color: $bgc-e81a50;
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: calc(50% - 6px); // 6px - width
+      top: calc(50% - 1.5px); // 1.5px - height
+      width: 12px;
+      height: 3px;
+      background-color: $bgc-ffffff;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: calc(50% - 6px); // 6px - height
+      left: calc(50% - 1.5px); // 1.5px - width
+      width: 3px;
+      height: 12px;
+      background-color: $bgc-ffffff;
+    }
+  }
+}
+
+
+.tables-list {
+  width: 100%;
+  max-width: 100%;
+  min-width: 100%;
+  border: 1px solid $border-e4e4e4;
+  border-collapse: collapse;
+  border-spacing: 0;
+
+  thead {
+    background-color: $bgc-f2f3f6;
+  }
+
+  tbody tr:hover {
+      background-color: rgba(232, 26, 80, 0.025);
+  }
+
+
+  &__column {
+    font-family: $Montserrat-Bold;
+    @include rem(fs, 12, $font-size-mixin);
+    @include rem(lh, 14, $font-size-mixin);
+    text-align: left;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    color: $color-3d3d3d;
+    border-bottom: 1px solid $border-e4e4e4;
+  }
+
+  &__row {
+    font-family: $Montserrat-Regular;
+    @include rem(fs, 14, $font-size-mixin);
+    @include rem(lh, 16, $font-size-mixin);
+    font-weight: 700;
+    text-align: left;
+    color: $color-3d3d3d;
+    padding: 18px 20px;
+    cursor: pointer;
+    border-bottom: 1px solid $border-e4e4e4;
+
+    &--center {
+      text-align: center;
+      font-style: italic;
+    }
+
+    &--size {
+      width: 30%;
+      max-width: 30%;
+    }
+
+    a {
+      color: #4498ee;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+
+
+}

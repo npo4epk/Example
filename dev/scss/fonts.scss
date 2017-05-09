@@ -1,0 +1,9 @@
+/* @IMPORT
+ ========================= */
+@import "helpers/_mixins";
+
+/* FONTS
+ ========================= */
+@include font-face('Montserrat-Bold', '../fonts/Montserrat/Montserrat-Bold', normal, normal, ttf);
+@include font-face('Montserrat-Regular', '../fonts/Montserrat/Montserrat-Regular', normal, normal, ttf);
+@include font-face('Montserrat-Semibold', '../fonts/Montserrat/Montserrat-Semibold', normal, normal, ttf);

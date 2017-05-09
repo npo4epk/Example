@@ -1,0 +1,40 @@
+/* @IMPORT
+ ========================= */
+/* FONTS-FACE
+ 	@include font-face('FontAwesome', '../fonts/FontAwesome/fontawesome-webfont', normal, normal, eot woff2 woff ttf svg);
+ ========================= */
+/* PX in REM
+ 	@include rem(lh, 12, 16);
+	@include rem(fs, 12, 16);
+ ========================= */
+/* PSEUDO
+	@include pseudo(block, absolute, ' ');
+ ========================= */
+/* CLEARFIX
+	@include clearfix()
+ ========================= */
+/* PLEACEHOLDER
+	@include placeholder(red, normal, none)
+ ========================= */
+/* LIST-CLEAR
+	@include list-clear()
+ ========================= */
+/* FONTS
+ ========================= */
+@font-face {
+  font-family: "Montserrat-Bold";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/Montserrat/Montserrat-Bold.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "Montserrat-Regular";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/Montserrat/Montserrat-Regular.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "Montserrat-Semibold";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/Montserrat/Montserrat-Semibold.ttf") format("truetype"); }

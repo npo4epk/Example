@@ -1,0 +1,48 @@
+
+<div class="sign-in">
+    <div class="sign-in-wrapper">
+        <div class="sign-in-logo">
+            <a href="" class="sign-in-logo__link">
+                <img src="img/logo.svg" alt="logo" class="sign-in-logo__img">
+            </a>
+        </div>
+        <div class="sign-in-block">
+            <div class="sign-in-title">
+                <h1 class="sign-in-title__text">Sing In</h1>
+            </div>
+            <form class="sign-in-form"
+                  ng-submit="signInForm.$valid && $ctrl.signIn($ctrl.user)"
+                  name="signInForm"
+                  novalidate="novalidate">
+                <input class="sign-in-form__mail"
+                       ng-model="$ctrl.user.email"
+                       type="email"
+                       placeholder="E-mail"
+                       required>
+                <input class="sign-in-form__password"
+                       ng-model="$ctrl.user.password"
+                       type="password"
+                       placeholder="Password"
+                       required>
+                <button class="sign-in-form__button"
+                        type="submit"
+                        ng-disabled="signInForm.$invalid">Sing In
+                </button>
+                <p class="sign-in__text">Don't have an account?<a class="sign-in__link" ui-sref="sign-up" href="">Sign
+                    Up</a></p>
+            </form>
+        </div>
+    </div>
+    <ul class="sign-in-bubbles">
+        <li class="sign-in-bubbles__item"></li>
+        <li class="sign-in-bubbles__item"></li>
+        <li class="sign-in-bubbles__item"></li>
+        <li class="sign-in-bubbles__item"></li>
+        <li class="sign-in-bubbles__item"></li>
+        <li class="sign-in-bubbles__item"></li>
+        <li class="sign-in-bubbles__item"></li>
+        <li class="sign-in-bubbles__item"></li>
+        <li class="sign-in-bubbles__item"></li>
+        <li class="sign-in-bubbles__item"></li>
+    </ul>
+</div>
